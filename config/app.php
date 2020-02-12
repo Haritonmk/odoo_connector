@@ -174,6 +174,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+		
+		/*
+		Odoo
+		*/
+		Obuchmann\LaravelOdooApi\Providers\OdooServiceProvider::class
 
     ],
 
@@ -226,6 +231,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+		'Odoo' => Obuchmann\LaravelOdooApi\Facades\Odoo::class,
     ],
 
 ];

@@ -4,8 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ac7407dc851b5e4eb9c002f1ba28c68",
+    "content-hash": "d0793c6c8748041e309ef44d73b49796",
     "packages": [
+        {
+            "name": "darkaonline/ripcord",
+            "version": "v0.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DarkaOnLine/Ripcord.git",
+                "reference": "e37abe596f505236c489b3f8a8e6eaa2ad7d91f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DarkaOnLine/Ripcord/zipball/e37abe596f505236c489b3f8a8e6eaa2ad7d91f7",
+                "reference": "e37abe596f505236c489b3f8a8e6eaa2ad7d91f7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.14@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ripcord\\": "src/Ripcord"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Darius Matulionis",
+                    "email": "darius@matulionis.lt"
+                }
+            ],
+            "description": "RPC client and server around PHP's xmlrpc library",
+            "keywords": [
+                "rpc",
+                "xml",
+                "xmlrpc"
+            ],
+            "time": "2019-01-02T06:13:30+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "v0.1.1",
@@ -992,6 +1036,55 @@
                 "php"
             ],
             "time": "2019-11-08T13:50:10+00:00"
+        },
+        {
+            "name": "obuchmann/laravel-odoo-api",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/obuchmann/laravel-odoo-api.git",
+                "reference": "1dbeaa8e37ab91f7f3cc474dd9eb3f1bce90efac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/obuchmann/laravel-odoo-api/zipball/1dbeaa8e37ab91f7f3cc474dd9eb3f1bce90efac",
+                "reference": "1dbeaa8e37ab91f7f3cc474dd9eb3f1bce90efac",
+                "shasum": ""
+            },
+            "require": {
+                "darkaonline/ripcord": "^0.1.7",
+                "illuminate/support": "^5.2||^6.0",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8||^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Obuchmann\\LaravelOdooApi\\": "src/"
+                },
+                "files": [
+                    "src/Support/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Buchmann",
+                    "email": "obuchmanncode@gmail.com"
+                }
+            ],
+            "description": "Laravel connector for Odoo",
+            "keywords": [
+                "laravel",
+                "odoo",
+                "package"
+            ],
+            "time": "2019-12-06T15:42:44+00:00"
         },
         {
             "name": "opis/closure",
@@ -4984,7 +5077,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "obuchmann/laravel-odoo-api": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
