@@ -11,15 +11,19 @@ class OdooController extends Controller
 		$userId = "0";
 		$odoo = new \Obuchmann\LaravelOdooApi\Odoo();
 		$odoo = $odoo
-            ->username('admin')
-            ->password('admin')
-            ->db('demo5')
-            ->host('https://demo5.odoo.com')
+            ->username('')
+            ->password('')
+            ->db('')
+            ->host('')
             ->connect();
 		
-		/*$version = $odoo->version();
-		$odoo = $odoo->connect();
-		$userId = $this->odoo->getUid();*/
-		return view('odoo.welcome', ['version' => $version, 'userId' => $userId]);
+		$version = $odoo->version();
+		/*$odoo = $odoo->connect();*/
+		$userId = $odoo->getUid();
+		$can = $odoo->can('read', 'res.partner');//'ir.model', 'hr.department'
+		$department = $odoo
+    ->model('hr.employee')
+    ->get();
+		return view('odoo.welcome', ['version' => $version, 'userId' => $userId, 'department' => $department]);
 	}
 }
