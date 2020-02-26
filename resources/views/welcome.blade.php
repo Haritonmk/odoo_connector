@@ -83,10 +83,13 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-
+@if (Route::has('login'))
+    @auth
                 <div class="links">
                     <a href="{{ url('/odoo') }}">Odoo</a>
                 </div>
+    @endauth
+@endif
             </div>
         </div>
     </body>
