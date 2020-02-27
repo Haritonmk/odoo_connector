@@ -6,6 +6,17 @@ use Illuminate\Http\Request;
 
 class OdooController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role.auth');
+    }
+    
     public function index() {
 		$version = "0";
 		$userId = "0";
