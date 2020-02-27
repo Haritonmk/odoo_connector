@@ -11,6 +11,6 @@ class Role extends Model
      */
     public function permissions()
     {
-        return $this->morphToMany('App\PermissionsRole', 'permission');
+        return $this->morphToMany('App\Permission', 'permission', 'permissions_role', 'role_id');
     }
 }
