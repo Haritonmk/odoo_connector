@@ -18,3 +18,6 @@ Route::get('odoo', 'OdooController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/callback', function (Request $request) {
+    return json_decode((string) "{'return':'true'}", true);
+});
